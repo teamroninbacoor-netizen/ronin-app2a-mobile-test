@@ -1,0 +1,1986 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <base target="_top">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Strike of a Ronin — Registration Status</title>
+
+
+
+  <style>
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+
+
+    html,
+
+    body {
+
+      width: 100%;
+
+      min-height: 100%;
+
+    }
+
+
+
+    body {
+
+      min-height: 100vh;
+
+      background:
+
+        radial-gradient(circle at 50% 20%, rgba(212,175,55,0.10), transparent 35%),
+
+        linear-gradient(180deg, #090909 0%, #050505 55%, #000000 100%);
+
+      color: #ffffff;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      padding: 30px 18px;
+
+    }
+
+
+
+    .page {
+
+      width: 100%;
+
+      max-width: 900px;
+
+      text-align: center;
+
+    }
+
+
+
+    .event-label {
+
+      color: #c9a227;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      letter-spacing: 4px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 18px;
+
+    }
+
+
+
+    .title {
+
+      font-size: clamp(34px, 7vw, 68px);
+
+      line-height: 0.95;
+
+      font-weight: 900;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      background: linear-gradient(180deg, #fff8d8 0%, #d4af37 45%, #8d6b16 100%);
+
+      -webkit-background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+
+      background-clip: text;
+
+      margin-bottom: 14px;
+
+    }
+
+
+
+    .subtitle {
+
+      color: #eeeeee;
+
+      font-size: clamp(18px, 3vw, 28px);
+
+      font-weight: 700;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 12px;
+
+    }
+
+
+
+    .tagline {
+
+      color: #999999;
+
+      font-size: 14px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 45px;
+
+    }
+
+
+
+    .registration-card {
+
+      width: 100%;
+
+      max-width: 650px;
+
+      margin: 0 auto;
+
+      padding: 42px 35px;
+
+      background: linear-gradient(145deg, rgba(255,255,255,0.055), rgba(255,255,255,0.015));
+
+      border: 1px solid rgba(212,175,55,0.35);
+
+      border-radius: 18px;
+
+      box-shadow:
+
+        0 20px 60px rgba(0,0,0,0.65),
+
+        inset 0 1px 0 rgba(255,255,255,0.04);
+
+    }
+
+
+
+    .card-title {
+
+      color: #d4af37;
+
+      font-size: 22px;
+
+      font-weight: 800;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 12px;
+
+    }
+
+
+
+    .card-description {
+
+      color: #aaaaaa;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+      max-width: 500px;
+
+      margin: 0 auto 30px;
+
+    }
+
+
+
+    .registration-form {
+
+      text-align: left;
+
+      max-width: 500px;
+
+      margin: 0 auto;
+
+    }
+
+
+
+    .form-group {
+
+      margin-bottom: 20px;
+
+    }
+
+
+
+    .form-label {
+
+      display: block;
+
+      color: #d4af37;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 8px;
+
+    }
+
+
+
+    .form-input {
+
+      width: 100%;
+
+      padding: 14px 15px;
+
+      border: 1px solid rgba(212,175,55,0.30);
+
+      border-radius: 8px;
+
+      outline: none;
+
+      background: rgba(0,0,0,0.45);
+
+      color: #ffffff;
+
+      font-size: 15px;
+
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    }
+
+
+
+    .form-input::placeholder {
+
+      color: #666666;
+
+    }
+
+
+
+    select.form-input {
+
+      color-scheme: dark;
+
+    }
+
+
+
+    select.form-input option {
+
+      background: #090909;
+
+      color: #ffffff;
+
+    }
+
+
+
+    .form-input:focus {
+
+      border-color: rgba(212,175,55,0.75);
+
+      box-shadow: 0 0 0 3px rgba(212,175,55,0.08);
+
+    }
+
+
+
+    .submit-button {
+
+      width: 100%;
+
+      border: none;
+
+      outline: none;
+
+      cursor: pointer;
+
+      padding: 16px 38px;
+
+      border-radius: 8px;
+
+      color: #080808;
+
+      background: linear-gradient(180deg, #f1d56a 0%, #d4af37 50%, #a77f16 100%);
+
+      font-size: 14px;
+
+      font-weight: 900;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      box-shadow: 0 8px 25px rgba(212,175,55,0.20);
+
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    }
+
+
+
+    .submit-button:hover {
+
+      transform: translateY(-2px);
+
+      box-shadow: 0 12px 32px rgba(212,175,55,0.35);
+
+    }
+
+
+
+    .submit-button:active {
+
+      transform: translateY(0);
+
+    }
+
+
+
+    .submit-button:disabled {
+
+      cursor: not-allowed;
+
+      opacity: 0.55;
+
+      transform: none;
+
+    }
+
+
+
+    .secondary-button {
+
+      width: 100%;
+
+      margin-top: 12px;
+
+      padding: 14px 20px;
+
+      border: 1px solid rgba(212,175,55,0.30);
+
+      border-radius: 8px;
+
+      background: transparent;
+
+      color: #d4af37;
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      cursor: pointer;
+
+      transition: background 0.2s ease, border-color 0.2s ease;
+
+    }
+
+
+
+    .secondary-button:hover {
+
+      background: rgba(212,175,55,0.06);
+
+      border-color: rgba(212,175,55,0.55);
+
+    }
+
+
+
+    .back-button {
+
+      display: block;
+
+      width: 100%;
+
+      margin-top: 12px;
+
+      padding: 12px;
+
+      border: 1px solid rgba(255,255,255,0.10);
+
+      border-radius: 8px;
+
+      background: transparent;
+
+      color: #777777;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      letter-spacing: 1.5px;
+
+      text-transform: uppercase;
+
+      cursor: pointer;
+
+    }
+
+
+
+    .back-button:hover {
+
+      color: #aaaaaa;
+
+      border-color: rgba(255,255,255,0.20);
+
+    }
+
+
+
+    .message {
+
+      display: none;
+
+      margin-top: 18px;
+
+      padding: 12px 14px;
+
+      border-radius: 8px;
+
+      font-size: 13px;
+
+      line-height: 1.5;
+
+    }
+
+
+
+    .error-message {
+
+      background: rgba(180,30,30,0.12);
+
+      border: 1px solid rgba(220,70,70,0.35);
+
+      color: #ff9b9b;
+
+    }
+
+
+
+    .success-message {
+
+      background: rgba(30,160,80,0.12);
+
+      border: 1px solid rgba(50,190,100,0.35);
+
+      color: #7ee2a4;
+
+    }
+
+
+
+    .success-card {
+
+      display: none;
+
+      text-align: center;
+
+    }
+
+
+
+    .success-icon {
+
+      font-size: 48px;
+
+      margin-bottom: 15px;
+
+    }
+
+
+
+    .success-title {
+
+      color: #d4af37;
+
+      font-size: 24px;
+
+      font-weight: 900;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 12px;
+
+    }
+
+
+
+    .success-text {
+
+      color: #aaaaaa;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+      margin-bottom: 22px;
+
+    }
+
+
+
+    .registration-number {
+
+      display: inline-block;
+
+      padding: 12px 20px;
+
+      border: 1px solid rgba(212,175,55,0.35);
+
+      border-radius: 8px;
+
+      background: rgba(212,175,55,0.06);
+
+      color: #f1d56a;
+
+      font-size: 20px;
+
+      font-weight: 900;
+
+      letter-spacing: 3px;
+
+      margin-bottom: 12px;
+
+    }
+
+
+
+    .success-note {
+
+      color: #777777;
+
+      font-size: 12px;
+
+      line-height: 1.6;
+
+    }
+
+
+
+    /* MY REGISTRATION */
+
+
+
+    .lookup-view {
+
+      display: none;
+
+    }
+
+
+
+    .lookup-result {
+
+      display: none;
+
+      text-align: left;
+
+      max-width: 500px;
+
+      margin: 25px auto 0;
+
+    }
+
+
+
+    .result-title {
+
+      color: #d4af37;
+
+      font-size: 15px;
+
+      font-weight: 900;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 15px;
+
+      text-align: center;
+
+    }
+
+
+
+    .result-row {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      padding: 13px 0;
+
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+
+    }
+
+
+
+    .result-label {
+
+      color: #777777;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: 1.5px;
+
+      text-transform: uppercase;
+
+    }
+
+
+
+    .result-value {
+
+      color: #eeeeee;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      text-align: right;
+
+      word-break: break-word;
+
+    }
+
+
+
+    .status-value {
+
+      color: #7ee2a4;
+
+    }
+/* MY ENTRIES — read-only section */
+
+
+
+    .my-entries-section {
+
+      display: none;
+
+      max-width: 100%;
+
+      margin: 30px auto 0;
+
+      text-align: left;
+
+      padding-top: 24px;
+
+      border-top: 1px solid rgba(212,175,55,0.25);
+
+    }
+
+
+
+    .entries-heading {
+
+      color: #d4af37;
+
+      font-size: 18px;
+
+      font-weight: 900;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      text-align: center;
+
+      margin-bottom: 8px;
+
+    }
+
+
+
+    .entries-description {
+
+      color: #888888;
+
+      font-size: 12px;
+
+      line-height: 1.6;
+
+      text-align: center;
+
+      margin-bottom: 18px;
+
+    }
+
+
+
+    .entries-message {
+
+      display: none;
+
+      padding: 14px;
+
+      margin: 12px 0;
+
+      border-radius: 8px;
+
+      background: rgba(255,255,255,0.025);
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      color: #aaaaaa;
+
+      text-align: center;
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+    }
+
+
+
+    .entries-error {
+
+      color: #ff9b9b;
+
+      border-color: rgba(220,70,70,0.35);
+
+      background: rgba(180,30,30,0.10);
+
+    }
+
+
+
+    .entries-table-wrap {
+
+      display: none;
+
+      width: 100%;
+
+      overflow-x: auto;
+
+      border: 1px solid rgba(212,175,55,0.22);
+
+      border-radius: 9px;
+
+      background: rgba(0,0,0,0.25);
+
+      -webkit-overflow-scrolling: touch;
+
+    }
+
+
+
+    .entries-table {
+
+      width: 100%;
+
+      min-width: 520px;
+
+      border-collapse: collapse;
+
+      font-size: 12px;
+
+    }
+
+
+
+    .entries-table th {
+
+      padding: 12px 10px;
+
+      background: rgba(212,175,55,0.10);
+
+      color: #d4af37;
+
+      font-size: 10px;
+
+      font-weight: 900;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      text-align: left;
+
+      white-space: nowrap;
+
+      border-bottom: 1px solid rgba(212,175,55,0.22);
+
+    }
+
+
+
+    .entries-table td {
+
+      padding: 13px 10px;
+
+      color: #eeeeee;
+
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+
+      vertical-align: middle;
+
+      white-space: nowrap;
+
+    }
+
+
+
+    .entries-table tbody tr:last-child td {
+
+      border-bottom: none;
+
+    }
+
+
+
+    .entries-table tbody tr:hover {
+
+      background: rgba(212,175,55,0.035);
+
+    }
+
+
+
+    .entry-number-cell {
+
+      color: #f1d56a !important;
+
+      font-weight: 900;
+
+    }
+
+
+
+    .bench-status-cell {
+
+      color: #9fc9ff !important;
+
+      font-weight: 700;
+
+    }
+
+
+
+    .show-status-cell {
+
+      color: #7ee2a4 !important;
+
+      font-weight: 700;
+
+    }
+
+
+
+    .footer {
+
+      margin-top: 35px;
+
+      color: #555555;
+
+      font-size: 11px;
+
+      letter-spacing: 1.5px;
+
+      text-transform: uppercase;
+
+    }
+
+
+
+    @media (max-width: 600px) {
+
+      body {
+
+        padding: 20px 14px;
+
+      }
+
+
+
+      .registration-card {
+
+        padding: 32px 22px;
+
+      }
+
+
+
+      .event-label {
+
+        font-size: 10px;
+
+        letter-spacing: 3px;
+
+      }
+
+
+
+      .tagline {
+
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+
+        margin-bottom: 32px;
+
+      }
+
+
+
+      .card-title {
+
+        font-size: 18px;
+
+      }
+
+
+
+      .card-description {
+
+        font-size: 13px;
+
+      }
+
+
+
+      .success-title {
+
+        font-size: 20px;
+
+      }
+
+
+
+      .result-row {
+
+        display: block;
+
+      }
+
+
+
+      .result-value {
+
+        text-align: left;
+
+        margin-top: 5px;
+
+      }
+
+
+
+      .entries-heading {
+
+        font-size: 16px;
+
+      }
+
+
+
+      .entries-table th {
+
+        padding: 11px 8px;
+
+      }
+
+
+
+      .entries-table td {
+
+        padding: 12px 8px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+  <main class="page">
+
+
+
+    <div class="event-label"></div>
+
+
+
+    <h1 class="title">Strike of a Ronin</h1>
+
+
+
+    <div class="subtitle">Bacoor Betta Show 2026</div>
+
+
+
+    <div class="tagline">United by Passion • Fight as One</div>
+
+
+
+    <section class="registration-card">
+
+
+
+      <!-- PLAYER REGISTRATION VIEW -->
+
+      <div id="registrationView" style="display: none;">
+
+
+
+        <div class="card-title">Player Registration</div>
+
+
+
+        <p class="card-description">
+
+          Register as player and prepare your entries
+
+          for the Strike of a Ronin Bacoor Betta Show 2026.
+
+        </p>
+
+
+
+        <form
+
+          id="registrationForm"
+
+          class="registration-form"
+
+          onsubmit="submitRegistrationForm(event)"
+
+        >
+
+          <div class="form-group">
+
+            <label class="form-label" for="playerName">Player Name</label>
+
+            <input
+
+              id="playerName"
+
+              class="form-input"
+
+              type="text"
+
+              placeholder="Enter your full name"
+
+              autocomplete="name"
+
+              required
+
+            >
+
+          </div>
+
+
+
+          <div class="form-group">
+
+            <label class="form-label" for="chapterTeam">Chapter / Team</label>
+
+            <input
+
+              id="chapterTeam"
+
+              class="form-input"
+
+              type="text"
+
+              placeholder="Enter your Chapter or Team"
+
+              autocomplete="organization"
+
+              maxlength="120"
+
+              required
+
+            >
+
+          </div>
+
+
+
+          <div class="form-group">
+
+            <label class="form-label" for="membershipType">Registration Group</label>
+
+            <select id="membershipType" class="form-input" required>
+
+              <option value="" selected disabled>Select PUBH or Non-PUBH</option>
+
+              <option value="PUBH">PUBH</option>
+
+              <option value="Non-PUBH">Non-PUBH</option>
+
+            </select>
+
+          </div>
+
+
+
+          <button id="submitButton" type="submit" class="submit-button">
+
+            Submit Registration
+
+          </button>
+
+
+
+          <button
+
+            type="button"
+
+            class="secondary-button"
+
+            onclick="showLookupView()"
+
+          >
+
+            My Registration
+
+          </button>
+
+
+
+          <div id="errorMessage" class="message error-message"></div>
+
+        </form>
+
+      </div>
+
+
+
+      <!-- MY REGISTRATION LOOKUP -->
+
+      <div id="lookupView" class="lookup-view" style="display: block;">
+
+
+
+        <div class="card-title">Registration Status</div>
+
+
+
+        <p class="card-description">
+          Enter your Registration ID to view your current registration status
+          and your registered fish entries. Personal details will not be displayed.
+        </p>
+
+
+
+        <form
+
+          id="lookupForm"
+
+          class="registration-form"
+
+          onsubmit="lookupRegistration(event)"
+
+        >
+
+          <div class="form-group">
+
+            <label class="form-label" for="lookupRegistrationId">
+
+              Registration ID
+
+            </label>
+
+            <input
+
+              id="lookupRegistrationId"
+
+              class="form-input"
+
+              type="text"
+
+              placeholder="Example: REG-0001"
+
+              autocomplete="off"
+
+              required
+
+            >
+
+          </div>
+
+
+
+          <button id="lookupButton" type="submit" class="submit-button">
+
+            Check Registration
+
+          </button>
+
+
+
+          <div id="lookupErrorMessage" class="message error-message"></div>
+
+        </form>
+
+
+
+        <!-- REGISTRATION STATUS RESULT -->
+
+        <div id="lookupResult" class="lookup-result">
+
+          <div class="result-title">Registration Status</div>
+
+
+
+          <div class="result-row">
+
+            <div class="result-label">Registration ID</div>
+
+            <div id="resultRegistrationId" class="result-value"></div>
+
+          </div>
+<div class="result-row">
+
+            <div class="result-label">Registration Status</div>
+
+            <div id="resultStatus" class="result-value status-value"></div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- MY ENTRIES: READ ONLY -->
+
+        <section id="myEntriesSection" class="my-entries-section">
+
+
+
+          <div class="entries-heading">My Entries</div>
+
+
+
+          <p class="entries-description">
+
+            Fish entries linked to your Registration ID.
+
+            This list is for viewing only.
+
+          </p>
+
+
+
+          <div id="entriesLoading" class="entries-message">
+
+            Loading your entries...
+
+          </div>
+
+
+
+          <div id="entriesEmpty" class="entries-message">
+
+            No fish entries are currently linked to this Registration ID.
+
+          </div>
+
+
+
+          <div id="entriesError" class="entries-message entries-error">
+
+            Your entries could not be loaded. Please try again later.
+
+          </div>
+
+
+
+          <div id="entriesTableWrap" class="entries-table-wrap">
+
+            <table class="entries-table">
+
+              <thead>
+
+                <tr>
+
+                  <th>Entry No.</th>
+
+                  <th>Tank No.</th>
+
+                  <th>Category</th>
+
+                  <th>Bench Status</th>
+
+                  <th>Show Status</th>
+
+                </tr>
+
+              </thead>
+
+              <tbody id="entriesTableBody"></tbody>
+
+            </table>
+
+          </div>
+
+
+
+        </section>
+
+
+
+      </div>
+
+
+
+      <!-- REGISTRATION SUCCESS -->
+
+      <div id="successView" class="success-card">
+
+
+
+        <div class="success-icon">✓</div>
+
+
+
+        <div class="success-title">Registration Received</div>
+
+
+
+        <p class="success-text">
+          Your registration has been submitted successfully.
+          Save your Registration ID so you can check your registration status
+          and view your registered fish entries later.
+        </p>
+
+
+
+        <div class="success-note">REGISTRATION ID</div>
+
+        <div id="registrationNumber" class="registration-number"></div>
+
+
+
+        <div class="success-note">
+          Keep your Registration ID somewhere safe. You will need this ID
+          to check your registration status and view your registered fish entries.
+        </div>
+
+
+
+      </div>
+
+
+
+    </section>
+
+
+
+    <div class="footer">
+
+      December 5–6, 2026 • Molino IV, Bacoor, Cavite
+
+    </div>
+
+
+
+  </main>
+
+
+
+  <script src="ronin-2a-api-config.js"></script>
+  <script src="ronin-2a-api-bridge.js"></script>
+
+  <script>
+
+    /* Player registration is intentionally unavailable in the public build. */
+
+
+    /* =========================================
+
+       MY REGISTRATION VIEW
+
+       ========================================= */
+
+
+
+    function showLookupView() {
+
+      document.getElementById('registrationView').style.display = 'none';
+
+      document.getElementById('successView').style.display = 'none';
+
+      document.getElementById('lookupView').style.display = 'block';
+
+
+
+      document.getElementById('lookupErrorMessage').style.display = 'none';
+
+      document.getElementById('lookupResult').style.display = 'none';
+
+      resetMyEntries();
+
+
+
+      document.getElementById('lookupForm').reset();
+
+      document.getElementById('lookupRegistrationId').focus();
+
+    }
+
+
+
+
+
+    function lookupRegistration(event) {
+
+      if (event && typeof event.preventDefault === 'function') {
+
+        event.preventDefault();
+
+      }
+
+
+
+      const registrationId =
+
+        document.getElementById('lookupRegistrationId').value.trim();
+
+
+
+      const lookupButton = document.getElementById('lookupButton');
+
+      const lookupErrorMessage =
+
+        document.getElementById('lookupErrorMessage');
+
+
+
+      lookupErrorMessage.style.display = 'none';
+
+      lookupErrorMessage.textContent = '';
+
+      document.getElementById('lookupResult').style.display = 'none';
+
+      resetMyEntries();
+
+
+
+      if (!registrationId) {
+
+        showLookupError('Please enter your REGISTRATION ID.');
+
+        return;
+
+      }
+
+
+
+      lookupButton.disabled = true;
+
+      lookupButton.textContent = 'Checking...';
+
+
+
+      google.script.run
+
+        .withSuccessHandler(function(result) {
+
+          lookupButton.disabled = false;
+
+          lookupButton.textContent = 'Check Registration';
+
+
+
+          if (!result || !result.success) {
+
+            if (result && result.locked) {
+
+              showLookupError(
+
+                'Too many checks for this Registration ID. Please try again in 15 minutes.'
+
+              );
+
+            } else {
+
+              showLookupError(
+
+                'Registration ID not found. Please check the ID and try again.'
+
+              );
+
+            }
+
+            return;
+
+          }
+
+
+
+          document.getElementById('resultRegistrationId').textContent =
+
+            result.registrationId;
+document.getElementById('resultStatus').textContent =
+
+            result.status;
+
+
+
+          document.getElementById('lookupResult').style.display = 'block';
+
+
+
+          // Load fish entries only after the Registration ID is verified.
+
+          loadMyEntries(result.registrationId);
+
+        })
+
+        .withFailureHandler(function(error) {
+
+          lookupButton.disabled = false;
+
+          lookupButton.textContent = 'Check Registration';
+
+
+
+          showLookupError(
+
+            error && error.message
+
+              ? error.message
+
+              : 'Something went wrong. Please try again.'
+
+          );
+
+        })
+
+        .getRegistration(registrationId);
+
+    }
+
+
+
+
+
+    function showLookupError(message) {
+
+      const lookupErrorMessage =
+
+        document.getElementById('lookupErrorMessage');
+
+
+
+      lookupErrorMessage.textContent = message;
+
+      lookupErrorMessage.style.display = 'block';
+
+    }
+
+
+
+
+
+    /* =========================================
+
+       MY ENTRIES — READ ONLY
+
+       ========================================= */
+
+
+
+    function resetMyEntries() {
+
+      document.getElementById('myEntriesSection').style.display = 'none';
+
+      document.getElementById('entriesLoading').style.display = 'none';
+
+      document.getElementById('entriesEmpty').style.display = 'none';
+
+      document.getElementById('entriesError').style.display = 'none';
+
+      document.getElementById('entriesTableWrap').style.display = 'none';
+
+
+
+      document.getElementById('entriesTableBody').replaceChildren();
+
+    }
+
+
+
+
+
+    function loadMyEntries(registrationId) {
+
+      const section = document.getElementById('myEntriesSection');
+
+
+
+      resetMyEntries();
+
+      section.style.display = 'block';
+
+      document.getElementById('entriesLoading').style.display = 'block';
+
+
+
+      google.script.run
+
+        .withSuccessHandler(function(result) {
+
+          document.getElementById('entriesLoading').style.display = 'none';
+
+
+
+          if (!result || !result.success) {
+
+            if (result && result.locked) {
+
+              showEntriesError(
+
+                'Too many entry checks for this Registration ID. Please try again in 15 minutes.'
+
+              );
+
+            } else {
+
+              showEntriesError(
+
+                'We could not verify the Registration ID for your entries. Please check again.'
+
+              );
+
+            }
+
+            return;
+
+          }
+
+
+
+          const entries = Array.isArray(result.entries) ? result.entries : [];
+
+
+
+          if (entries.length === 0) {
+
+            document.getElementById('entriesEmpty').style.display = 'block';
+
+            return;
+
+          }
+
+
+
+          renderMyEntries(entries);
+
+        })
+
+        .withFailureHandler(function(error) {
+
+          document.getElementById('entriesLoading').style.display = 'none';
+
+
+
+          showEntriesError(
+
+            error && error.message
+
+              ? error.message
+
+              : 'Your entries could not be loaded. Please try again later.'
+
+          );
+
+        })
+
+        .getMyEntries(registrationId);
+
+    }
+
+
+
+
+
+    function renderMyEntries(entries) {
+
+      const tbody = document.getElementById('entriesTableBody');
+
+      tbody.replaceChildren();
+
+
+
+      entries.forEach(function(entry) {
+
+        const row = document.createElement('tr');
+
+
+
+        addEntryCell(row, entry.entryNo, 'entry-number-cell');
+
+        addEntryCell(row, entry.tankNo, '');
+
+        addEntryCell(row, entry.category, '');
+
+        addEntryCell(
+
+          row,
+
+          entry.benchStatus || 'NOT CHECKED IN',
+
+          'bench-status-cell'
+
+        );
+
+        addEntryCell(
+
+          row,
+
+          entry.status || 'PENDING',
+
+          'show-status-cell'
+
+        );
+
+
+
+        tbody.appendChild(row);
+
+      });
+
+
+
+      document.getElementById('entriesTableWrap').style.display = 'block';
+
+    }
+
+
+
+
+
+    function addEntryCell(row, value, className) {
+
+      const cell = document.createElement('td');
+
+
+
+      // Use textContent so spreadsheet values are displayed as text.
+
+      cell.textContent = value == null ? '' : String(value);
+
+
+
+      if (className) {
+
+        cell.className = className;
+
+      }
+
+
+
+      row.appendChild(cell);
+
+    }
+
+
+
+
+
+    function showEntriesError(message) {
+
+      const errorBox = document.getElementById('entriesError');
+
+      errorBox.textContent = message;
+
+      errorBox.style.display = 'block';
+
+    }
+
+
+
+
+
+    /* Public build: always return to the read-only lookup. */
+    function showStartPage() {
+      showLookupView();
+    }
+
+
+    /* =========================================
+
+       REGISTRATION ERROR
+
+       ========================================= */
+
+
+
+    function showError(message) {
+
+      const errorMessage = document.getElementById('errorMessage');
+
+      errorMessage.textContent = message;
+
+      errorMessage.style.display = 'block';
+
+    }
+
+
+
+
+
+    /* =========================================
+
+       APP #1 REGISTRATION ID HANDOFF
+
+       Preserve existing automatic lookup behavior.
+
+       ========================================= */
+
+
+
+    const incomingRegistrationId =
+
+      (new URLSearchParams(window.location.search).get('registrationId') || '').trim();
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+      if (!incomingRegistrationId) return;
+
+
+
+      const registrationView = document.getElementById('registrationView');
+
+      const successView = document.getElementById('successView');
+
+      const lookupView = document.getElementById('lookupView');
+
+      const registrationIdInput =
+
+        document.getElementById('lookupRegistrationId');
+
+
+
+      const lookupErrorMessage =
+
+        document.getElementById('lookupErrorMessage');
+
+
+
+      const lookupResult = document.getElementById('lookupResult');
+
+
+
+      if (
+
+        !registrationView ||
+
+        !successView ||
+
+        !lookupView ||
+
+        !registrationIdInput
+
+      ) {
+
+        return;
+
+      }
+
+
+
+      registrationView.style.display = 'none';
+
+      successView.style.display = 'none';
+
+      lookupView.style.display = 'block';
+
+
+
+      registrationIdInput.value = incomingRegistrationId;
+
+
+
+      if (lookupErrorMessage) {
+
+        lookupErrorMessage.style.display = 'none';
+
+        lookupErrorMessage.textContent = '';
+
+      }
+
+
+
+      if (lookupResult) {
+
+        lookupResult.style.display = 'none';
+
+      }
+
+
+
+      resetMyEntries();
+
+
+
+      // Reuse the existing Registration Status lookup.
+
+      // The entries list loads after the ID is successfully verified.
+
+      lookupRegistration({
+
+        preventDefault: function() {}
+
+      });
+
+    });
+
+  </script>
+
+</body>
+
+</html>
